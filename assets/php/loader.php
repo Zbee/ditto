@@ -1,15 +1,17 @@
 <?php
-#Secret keys, passwords, connections
-require_once(__DIR__ . "/_secret_keys.php");
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+  
 #Connect to MySQL
 try {
   $db = new PDO(
-    "mysql:host=$db[host];dbname=$db[db];charset=utf8",
-    $db["user"],
-    $db["pass"]
+    "mysql:host=" . getenv("db-host") . ";dbname=" . getenv("db-base") . ";charset=utf8",
+    getenv("db-user"),
+    getenv("db-pass")
   );
 } catch (Exception $e) {
+  error_log($e);
   die("MySQL could not connect<br>$e");
 }
 
