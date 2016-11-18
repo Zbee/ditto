@@ -3,6 +3,7 @@
 require_once(__DIR__ . "/_secret_keys.php");
 
 echo getenv("db-host");
+die();
 
 #Connect to MySQL
 try {
