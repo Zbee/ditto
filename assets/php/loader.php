@@ -2,6 +2,8 @@
 #Secret keys, passwords, connections
 require_once(__DIR__ . "/_secret_keys.php");
 
+echo getenv("db-host");
+
 #Connect to MySQL
 try {
   $db = new PDO(
