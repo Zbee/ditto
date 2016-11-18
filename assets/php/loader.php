@@ -7,6 +7,8 @@ try {
     getenv("db-pass")
   );
 } catch (Exception $e) {
+  var_dump($e);
+  die();
   die("MySQL could not connect<br>$e");
 }
 
