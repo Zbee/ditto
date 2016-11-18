@@ -1,4 +1,11 @@
 <?php
+  
+getenv("db-host");
+getenv("db-base");
+getenv("db-user");
+getenv("db-pass");
+die();
+  
 #Connect to MySQL
 try {
   $db = new PDO(
