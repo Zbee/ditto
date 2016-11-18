@@ -8,9 +8,9 @@ die();
 #Connect to MySQL
 try {
   $db = new PDO(
-    "mysql:host=$db[host];dbname=$db[db];charset=utf8",
-    $db["user"],
-    $db["pass"]
+    "mysql:host=" . getenv("db-host") . ";dbname=" . getenv("db-base") . ";charset=utf8",
+    getenv("db-user"),
+    getenv("db-pass")
   );
 } catch (Exception $e) {
   die("MySQL could not connect<br>$e");
