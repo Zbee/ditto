@@ -14,8 +14,11 @@ try {
     getenv("db-pass")
   );
 } catch (Exception $e) {
+  die($e);
   die("MySQL could not connect<br>$e");
 }
+
+die();
 
 #Include ditto library
 try {
