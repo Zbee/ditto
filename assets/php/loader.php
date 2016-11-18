@@ -1,7 +1,4 @@
 <?php
-#Secret keys, passwords, connections
-#require_once(__DIR__ . "/_secret_keys.php");
-
 #Connect to MySQL
 try {
   $db = new PDO(
