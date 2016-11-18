@@ -1,6 +1,6 @@
 <?php
 #Secret keys, passwords, connections
-require_once(__DIR__ . "/_secret_keys.php");
+#require_once(__DIR__ . "/_secret_keys.php");
 
 echo getenv("db-host");
 die();
