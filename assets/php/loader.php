@@ -1,9 +1,9 @@
 <?php
-  
-getenv("db-host");
-getenv("db-base");
-getenv("db-user");
-getenv("db-pass");
+
+echo getenv("db-host");
+echo getenv("db-base");
+echo getenv("db-user");
+echo getenv("db-pass");
 die();
   
 #Connect to MySQL
