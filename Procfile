@@ -1,0 +1,1 @@
+web: service apache2 reload
